@@ -1,0 +1,31 @@
+-> docker-compose up 
+-> verify jenkins and sonar up and running
+-> login to jenkins and configure using simple installation
+-> configure admin pasword and note it
+-> use admin-admin in sonar login
+-> exec to jenkins container 
+-> goto /var/jenkins_home
+-> mkdir sonar-scanner
+-> cd sonar-scanner 
+-> download sonar-cli library and unzip it
+-> export path till /bin : make sure sonar-scanner is running on cli
+-> note the path and copy
+-> Goto Sonar -> My Account -> Configuration
+-> Generate new token for login access and note it
+-> Goto webhooks and create webhook 
+-> add url as <jenkins-url>/sonarqube-webhook/
+-> Goto Jenkins -> Manage Jenkins -> Configure System
+-> Add Sonarqube instance
+-> Provide sonar url and add server authentication token noted above
+-> Configure Tools 
+-> Add JDK and path
+-> Install Sonar Scanner manually -> enter path noted in above step
+-> Configure new project 
+-> Take source 
+-> Tick Prepare Sonarqube Environment
+-> Add Build Steps
+-> Select Execute SonarScan Environemt or similar
+-> Select JDK
+-> Provide properties - sonar properties to execute e.g. sonar.source=.
+-> Dont provide task
+-> Save and Build

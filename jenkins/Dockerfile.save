@@ -1,0 +1,4 @@
+FROM jenkins:jenkins      | 	at org.jvnet.hudson.reactor.Reactor$2.run(Reactor.java:210)
+jenkins      | 	at org.jvnet.hudson.reactor.Reactor$Node.run(Reactor.java:117)
+jenkins      | 	at java.util.concurrent.ThreadPoolExecutor.runWorker(Thread
+
